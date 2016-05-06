@@ -28,16 +28,20 @@ boundaryField
     outlet
     {
         type            fixedValue;
-        value           uniform 0;
+      	value		        uniform 0;
     }
 
-    free_surface
+    top
     {
-        type            fixedValue;
-        value           uniform 0;
+        type            symmetryPlane;
     }
 
-    flat_plate
+    bottom
+    {
+        type            symmetryPlane;
+    } 
+
+    cylinder
     {
         type            zeroGradient;
     }

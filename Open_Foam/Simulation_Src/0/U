@@ -31,12 +31,17 @@ boundaryField
         type            zeroGradient;
     }
 
-    free_surface
+    top
     {
-        type            zeroGradient;
+        type            symmetryPlane;
     }
 
-    flat_plate
+    bottom
+    {
+        type            symmetryPlane;
+    } 
+
+    cylinder
     {
         type            fixedValue;
         value           uniform (0 0 0);
@@ -46,6 +51,7 @@ boundaryField
     {
         type            empty;
     }
+
 }
 
 // ************************************************************************* //
